@@ -21,7 +21,7 @@ export default function useChat() {
                
             }
 
-            setMensagens((msgs) => [...mensagens, novaMensagem])
+            setMensagens((msgs) => [...msgs, novaMensagem])
 
             const resposta =await conversar(chatId, novaMensagem)
 
@@ -35,7 +35,7 @@ export default function useChat() {
                 
             }
 
-            setMensagens((msgs) => [...mensagens, mensagemResposta])
+            setMensagens((msgs) => [...msgs, mensagemResposta])
         } finally {
             setPensando(false)
         }
