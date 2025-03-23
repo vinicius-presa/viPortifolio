@@ -10,6 +10,7 @@ export default async function Home() {
   const projetos = await obterProjetos()
 
   return (
+    
     <div>
 
     <Principal tecnologias={tecnologias.destaques} />
