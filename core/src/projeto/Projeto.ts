@@ -3,6 +3,7 @@ import { Nivel } from "./Nivel"
 import { Tipo } from "./Tipo"
 
 export default interface Projeto {
+    tecnologias: Tecnologia[]
     id: number
     nome: string
     descricao: string
