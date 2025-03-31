@@ -5,6 +5,8 @@ import Container from "@/components/shared/container";
 import { obterProjetos } from "@/function/projetos";
 import { obterTecnologias } from "@/function/tecnologias";
 
+export const dynamic = 'force-dynamic'
+
 export default async function Home() {
   const tecnologias = await obterTecnologias()
   const projetos = await obterProjetos()
