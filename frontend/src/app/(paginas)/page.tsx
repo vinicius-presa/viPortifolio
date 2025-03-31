@@ -5,7 +5,8 @@ import Container from "@/components/shared/container";
 import { obterProjetos } from "@/function/projetos";
 import { obterTecnologias } from "@/function/tecnologias";
 
-export const dynamic = 'force-dynamic'
+//export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
 
 export default async function Home() {
   const tecnologias = await obterTecnologias()
