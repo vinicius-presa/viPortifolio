@@ -2,15 +2,18 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
+
 export default function Menu(){
     const caminho = usePathname()
 
     return (
-        <nav className="flex gap-6">
+        <nav className="flex gap-15">
             <MenuItem href="/" selecionado={caminho === "/"}>
-                Início
+            <div className="">    
+                Home
+            </div>    
             </MenuItem>
-            <MenuItem href="/projeto/1" selecionado={caminho.startsWith("/projeto")}>
+            <MenuItem href="/projeto/2" selecionado={caminho.startsWith("/projeto")}>
                 Projetos
             </MenuItem>
             <MenuItem 
@@ -20,6 +23,8 @@ export default function Menu(){
             >
                 Contato
             </MenuItem>
+            
+            
         </nav>
     )
 }
@@ -34,8 +39,11 @@ function MenuItem(props: {
         <Link href={props.href} target={props.novaAba ? "_blank" : "_self"}>
             <span
                 className={`
-                    flex items-center gap-2 text-sm border-red-600 hover:text-white
-                    ${props.selecionado ? "border-b-4 text-white" : "text-zinc-400"}    
+                    flex items-center font-bold gap-2 text-sm border-b-amber-400 hover:text-gray-500
+                    ${props.selecionado ? 
+                    "font-bold border-b-3 gap-2 text-white" 
+                    : "font-bold gap-2 text-zinc-300 "
+                    }    
                 `}
             >
                 {props.children}
