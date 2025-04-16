@@ -8,7 +8,8 @@ export interface ConteudoMDProps {
 
 export default function ConteudoMD(props: ConteudoMDProps) {
     return(
-        <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} skipHtml={false}>
+        <Markdown 
+            remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} skipHtml={false}>
             {props.markdown}
         </Markdown>
     )

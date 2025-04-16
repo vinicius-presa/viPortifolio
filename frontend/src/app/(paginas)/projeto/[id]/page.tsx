@@ -18,12 +18,12 @@ export default async function PaginaProjeto(props:{ params: Promise<{ id: string
             <Cabecalho />
         
                 <Container className="py-7 flex flex-col items-center gap-10">
-                    <h1 className="text-3xl font-bold self-start">{projeto.nome}</h1>
+                    <h1 className="text-3xl sm:text-5xl font-bold">{projeto.nome}</h1>
                     <CarrosselImagens imagens={projeto.imagens.slice(1)} />
                     <Tecnologias lista={projeto.tecnologias} tamanhoMenor />
-
-                    <Readme markdown={readme} />
-
+                    
+                        <Readme markdown={readme} />
+                    
                 </Container>
             </div>  
         
